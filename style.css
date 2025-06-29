@@ -353,3 +353,33 @@ span {
     height: 24px;
   }
 }
+
+
+.sticky-socials {
+  display: none; /* standaard verborgen op desktop */
+}
+
+@media (max-width: 768px) {
+  .sticky-socials {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    margin-bottom: 2rem;
+  }
+
+  .sticky-socials img {
+    width: 24px;
+    height: 24px;
+    filter: brightness(0) invert(1); /* wit maken op donkere bg */
+    transition: transform 0.2s ease;
+  }
+
+  .sticky-socials img:hover {
+    transform: scale(1.2);
+  }
+}
